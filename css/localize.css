@@ -1,0 +1,515 @@
+﻿/* F U E N T E */
+@font-face 
+{
+    font-family: 'cuprumffuregular';
+    src: url('fonts/cuprum-webfont.eot');
+    src: url('fonts/cuprum-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cuprum-webfont.woff') format('woff'),
+         url('fonts/cuprum-webfont.ttf') format('truetype'),
+         url('fonts/cuprum-webfont.svg#cuprumffuregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html
+{
+    height: 100%;
+}
+body 
+{
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    font-family:cuprumffuregular;
+    background-color:#eee;
+    background-image:url('../img/bg.jpg');
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+img 
+{
+	max-width: 100%;
+	height: auto;
+}
+input[type=text] 
+{
+    border:1px solid #265080;
+    height:30px;
+    width:100%;
+    font-size:16px;
+}
+input[type=password] 
+{
+    border:1px solid #265080;
+    height:30px;
+    width:100%;
+    font-size:16px;
+}
+input[type=text]:focus
+{
+    -webkit-box-shadow: 0px 0px 5px #000;  
+       -moz-box-shadow: 0px 0px 5px #000;  
+            box-shadow: 0px 0px 5px #000;
+}
+input[type=password]:focus
+{
+    -webkit-box-shadow: 0px 0px 5px #000;  
+       -moz-box-shadow: 0px 0px 5px #000;  
+            box-shadow: 0px 0px 5px #000;
+}
+#Acciones 
+{
+    display:none;
+    height:30px;
+    width:100%;
+    background-color: rgba(255,255,255,0.6);
+}
+    #Acciones span
+    {
+        font-size:20px;
+        color:#265080;
+    }
+        #Acciones span:hover 
+        {
+            color:#142C48;
+        }
+    #Acciones img 
+    {
+        float:left;
+        margin-left:10px;
+    }
+    #Acciones #ReportesButton 
+    {
+        float:right;
+        margin-right:15px;
+        margin-top:5px;
+    }
+    #Acciones #ConfiguracionButton 
+    {
+        float:right;
+        margin-right:15px;
+        margin-top:5px;
+    }
+
+#LoginPage 
+{
+    display:none;
+    overflow-y:scroll;
+}
+    #LoginPage .logo 
+    {
+        width:293px;
+        height:78px;
+        margin:0px auto;
+        padding-bottom:50px;
+        padding-top:50px;
+    }
+    #LoginPage .descripcion 
+    {
+        float:left;
+        width:50%;
+        margin-right:4%;
+    }
+        #LoginPage .descripcion p 
+        {
+            color:#fff;
+            font-size:28px;
+            max-width:300px;
+            float:right;
+            clear:both;
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+        }
+        #LoginPage .descripcion ul 
+        {
+            color:#fff;
+            font-size:24px;
+            max-width:300px;
+            float:right;
+            margin-left:15px;
+            list-style-type:square;
+            clear:both;
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+        }
+            #LoginPage .descripcion ul li 
+            {
+                display:none;
+            }
+    #LoginPage .login
+    {
+        float:left;
+        width:45%;
+    }
+#InicioPage 
+{
+    display:none;
+    overflow-y:hidden;
+    overflow:hidden;
+}
+    #InicioPage > span 
+    {
+        font-size:40px;
+        position:absolute;
+        right:30px;
+        color:#142C48;
+        text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
+        z-index:2;
+        display:none;
+    }
+    #InicioPage #GrupoAnteriorButton 
+    {
+        position:absolute;
+        z-index:2;
+        left:30px;
+        cursor:pointer;
+        opacity:0.75;
+        display:none;
+    }
+        #InicioPage #GrupoAnteriorButton:hover 
+        {
+            opacity:1;
+        }
+    #InicioPage #GrupoSiguienteButton 
+    {
+        position:absolute;
+        z-index:2;
+        right:30px;
+        cursor:pointer;
+        opacity:0.75;
+        display:none;
+    }
+        #InicioPage #GrupoSiguienteButton:hover 
+        {
+            opacity:1;
+        }
+    #InicioPage > ul 
+    {
+        position:absolute;
+        z-index:2;
+        list-style:none;
+        display:none;
+    }
+        #InicioPage > ul li
+        {
+            font-size:20px;
+            float:left;
+            margin-right:5px;
+            cursor:pointer;
+        }
+            #InicioPage > ul li img 
+            {
+                width:32px;
+                height:32px;
+            }
+    #InicioPage #Mapa 
+    {
+        width:100%;
+        position:relative;
+        z-index:1;
+    }
+    #InicioPage #ListaDeUnidades
+    {
+        height:270px;
+        width:100%;
+        overflow:hidden;
+        overflow-x:hidden;
+        overflow-y:hidden;
+        white-space:nowrap;
+        position:relative;
+        z-index:2;
+    }
+        #InicioPage #ListaDeUnidades:hover
+        {
+            overflow:scroll;
+            overflow-x:scroll;
+            /*overflow-y:scroll;*/
+        }
+        #InicioPage #ListaDeUnidades > div
+        {
+            width:190px;
+            height:270px;
+            display:inline-block;
+            vertical-align:top;
+            border-right:1px solid #265080;
+            background-color:#5078A0;
+        }
+            #InicioPage #ListaDeUnidades > div:hover 
+            {
+                cursor:pointer;
+                background-color:#265080;
+            }
+            #InicioPage #ListaDeUnidades > div > div .Encabezado 
+            {
+                height:70px;
+                color:#fff;
+                padding:0px;
+                margin:0px;
+                text-align:center;
+            }
+                #InicioPage #ListaDeUnidades > div > div .Encabezado img 
+                {
+                    display:block;
+                    margin-left:auto;
+                    margin-right:auto;
+                    margin-top:5px;
+                    height:40px;
+                    width:40px;
+                }
+                #InicioPage #ListaDeUnidades > div > div .Encabezado a 
+                {
+                    text-decoration:none;
+                    color:#fff;
+                    font-size:30px;
+                    float:right;
+                    margin-right:5px;
+                    line-height:0px;
+                }
+                #InicioPage #ListaDeUnidades > div > div .Encabezado .TituloUnidad
+                {
+                    font-size:16px;
+                    text-align:center;
+                }
+            #InicioPage #ListaDeUnidades > div > div .Info
+            {
+                background-color:#fff;
+                height:140px;
+            }
+                #InicioPage #ListaDeUnidades > div > div .Info table
+                {
+                    width:100%;
+                    text-align:center;
+                }
+                #InicioPage #ListaDeUnidades > div > div .Info .VelocidadUnidad
+                {
+                    font-size:35px;
+                    text-align:center;
+                    color:#265080;
+                }
+                #InicioPage #ListaDeUnidades > div > div .Info .OdometroUnidad 
+                {
+                    font-size:16px;
+                    white-space:normal;
+                    color:#265080;
+                }
+            #InicioPage #ListaDeUnidades > div > div .Pie
+            {
+                color:#fff;
+                height:60px;
+                text-align:center;
+            }
+                #InicioPage #ListaDeUnidades > div > div .Pie .DireccionUnidad 
+                {
+                    font-size:12px;
+                    white-space:normal;
+                }
+#InformacionPage 
+{
+    display:none;
+    overflow-y:scroll;
+    background-color:rgba(255,255,255,0.6);
+}
+    #InformacionPage h1 
+    {
+        font-size:20px;
+        color:#265080;
+        display:block;
+        padding:5px;
+        border-bottom:1px solid #265080;
+    }
+    #InformacionPage table
+    {
+        width:100%;
+    }
+    #InformacionPage .dato 
+    {
+        font-size:16px;
+        color:#265080;
+        border-bottom:1px solid #265080;
+    }
+    #InformacionPage .etiqueta 
+    {
+        font-size:15px;
+        color:#373737;
+        padding-left:15px;
+    }
+    #InformacionPage #Izquierda 
+    {
+        width:44%;
+        margin-left:3%;
+        margin-right:3%;
+        float:left;
+    }
+    #InformacionPage #Derecha 
+    {
+        width:44%;
+        margin-left:3%;
+        margin-right:3%;
+        float:left;
+    }
+#ReportesPage 
+{
+    display:none;
+    overflow-y:scroll;
+}
+#ConfiguracionPage 
+{
+    display:none;
+    overflow-y:scroll;
+}
+
+.Caja
+{
+    max-width:300px;
+}
+    .Caja table 
+    {
+        color:#fff;
+        width:100%;
+    }
+        .Caja table tr 
+        {
+            height:40px;
+        }
+
+.btn 
+{
+    background: #F88B23;
+    background-image: -webkit-linear-gradient(top, #265080, #1F3F68);
+    background-image: -moz-linear-gradient(top, #265080, #1F3F68);
+    background-image: -ms-linear-gradient(top, #265080, #1F3F68);
+    background-image: -o-linear-gradient(top, #265080, #1F3F68);
+    background-image: linear-gradient(to bottom, #265080, #1F3F68);
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    border: solid #142C48 1px;
+    text-decoration: none;
+}
+.btn:hover 
+{
+    background: #f28118;
+    background-image: -webkit-linear-gradient(top, #1F3F68, #265080);
+    background-image: -moz-linear-gradient(top, #1F3F68, #265080);
+    background-image: -ms-linear-gradient(top, #1F3F68, #265080);
+    background-image: -o-linear-gradient(top, #1F3F68, #265080);
+    background-image: linear-gradient(to bottom, #1F3F68, #265080);
+    text-decoration: none;
+}
+.Activo 
+{
+    color:#008f00;
+}
+.Inactivo 
+{
+    color:#8f0000;
+}
+.TileSeleccionado 
+{
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F04F09), color-stop(1, #FF9A47));
+    background-image: -o-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+    background-image: -moz-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+    background-image: -webkit-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+    background-image: -ms-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+    background-image: linear-gradient(to bottom, #F04F09 0%, #FF9A47 100%);
+}
+    .TileSeleccionado:hover 
+    {
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F04F09), color-stop(1, #FF9A47));
+        background-image: -o-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+        background-image: -moz-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+        background-image: -webkit-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+        background-image: -ms-linear-gradient(bottom, #F04F09 0%, #FF9A47 100%);
+        background-image: linear-gradient(to bottom, #F04F09 0%, #FF9A47 100%);
+    }
+.clearfix:after 
+{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*Animacion*/
+@keyframes fade 
+{
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+@-webkit-keyframes fade 
+{
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+.blink 
+{
+    background-color:#142C48;
+    color:#fff;
+    font-size:18px;
+    text-align:center;
+    width:50%;
+    margin:0px auto;
+    margin-top:120px;
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+@media only screen and (min-width: 768px) and (max-width:960px)
+{
+    #LoginPage .descripcion 
+    {
+
+    }
+        #LoginPage .descripcion p 
+        {
+            font-size:22px;
+        }
+        #LoginPage .descripcion ul 
+        {
+            font-size:18px;
+        }
+    #LoginPage .login .Caja table tr td input[type=button]
+    {
+        margin-left:30%;
+    }
+}
+@media only screen and (max-width: 767px) 
+{
+    #LoginPage .logo 
+    {
+        width:293px;
+        height:78px;
+        margin:0px auto;
+        padding-bottom:50px;
+        padding-top:50px;
+    }
+    #LoginPage .descripcion 
+    {
+        display:none;
+    }
+    #LoginPage .login 
+    {
+        float: none;
+        width: 300px;
+        margin:0px auto;
+    }
+    #LoginPage .login .Caja table tr td input[type=button]
+    {
+        margin-left:30%;
+    }
+    #InformacionPage #Izquierda 
+    {
+        width:100%;
+        float:none;
+        margin-bottom:20px;
+    }
+    #InformacionPage #Derecha 
+    {
+        width:100%;
+        float:none;
+    }
+}

@@ -1,0 +1,67 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?v1e5gn');
+	src:url('fonts/icomoon.eot?#iefixv1e5gn') format('embedded-opentype'),
+		url('fonts/icomoon.woff?v1e5gn') format('woff'),
+		url('fonts/icomoon.ttf?v1e5gn') format('truetype'),
+		url('fonts/icomoon.svg?v1e5gn#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location:before {
+	content: "\61";
+}
+.icon-map:before {
+	content: "\62";
+}
+.icon-alarm:before {
+	content: "\63";
+}
+.icon-screen:before {
+	content: "\64";
+}
+.icon-mobile:before {
+	content: "\65";
+}
+.icon-disk:before {
+	content: "\66";
+}
+.icon-spinner:before {
+	content: "\67";
+}
+.icon-cog:before {
+	content: "\68";
+}
+.icon-stats:before {
+	content: "\69";
+}
+.icon-meter:before {
+	content: "\6a";
+}
+.icon-meter2:before {
+	content: "\6b";
+}
+.icon-dashboard:before {
+	content: "\6c";
+}
+.icon-truck:before {
+	content: "\6d";
+}
+.icon-arrow-left:before {
+	content: "\6e";
+}
