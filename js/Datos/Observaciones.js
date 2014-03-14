@@ -1,3 +1,0 @@
-﻿Datos.CargarObservaciones = function () {
-
-};

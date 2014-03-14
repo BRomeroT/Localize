@@ -9,9 +9,8 @@
         </title>
     
         <link href="css/localize.css" type="text/css" rel="stylesheet" />
-        <link href="css/iconos.css" type="text/css" rel="stylesheet" />
-    
-        <script charset="UTF-8" type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&mkt=es-MX"></script>
+
+        <script charset="utf-8" type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&mkt=es-MX"></script>
         
         <!--Al9zPH654c2ilovwyubEWKEKfK0Z3q_lFHBf-OIsNRHtv49Pf0cuE3m9pVT3hImU-->
         <!-- Bing Map Control references -->
@@ -141,7 +140,7 @@
                     ObtenerVehiculosDelGrupo(grupo);
                 }
             }
-            
+
             //Inicialización del mapa
             function getMap()
             {
@@ -177,7 +176,7 @@
                 getMap();
             }
 
-            //Función para mostrar las caracteristicas en el login de manera aleatoria
+            //Función para mostrar las caracteristicas de localize en el login de manera aleatoria
             function MostrarTextoAleatorio()
             {
                 var numero = Math.floor((Math.random() * 4) + 1);
@@ -416,7 +415,7 @@
                     {
                         ObtenerUbicacionDeUnidadSeleccionada(this);
                     });
-                    
+
                 });
                 //Se enlaza el evento clic al encabezado de los vehiculos para poder mostrar el detalle de su información
                 $("#ListaDeUnidades > div div .Encabezado a").each(function ()
@@ -452,10 +451,10 @@
                     {
                         var data = $.parseJSON(res.responseText);
                         var v = data.GetUltimoPuntoLogHoyResult.RootResults[0];
-                        var etiqueta = $(unidad).data('etiqueta');
                         if ($.inArray(unidad.id, vehiculosSeleccionados) == -1)
                         {
-                            agregarPunto(v.lat, v.lon, v.asimut, etiqueta);
+                            var etiqueta = $(unidad).data('etiqueta');
+                            AgregarPunto(v.lat, v.lon, v.asimut, etiqueta);
                             //Inserta la unidad seleccionada al arreglo de "vehiculosSeleccionados"
                             vehiculosSeleccionados.push(unidad.id);
                             $(unidad).addClass("TileSeleccionado");
@@ -609,9 +608,9 @@
             }
 
             //Función para agregar un punto al mapa
-            function agregarPunto(lat, lon, asimut, etiqueta)
+            function AgregarPunto(lat, lon, asimut, etiqueta)
             {
-                var pushpinOptions = { width: null, height: null, htmlContent: '<table><tr><td style="text-align:center;"><span style="font-size:12px;">' + etiqueta + '</span></td></tr><tr><td style="text-align:center;"><img src="img/c.png" alt="" style="width:32px;height:32px;transform:rotate(' + asimut + 'deg);-ms-transform:rotate(' + asimut + 'deg);-webkit-transform:rotate(' + asimut + 'deg);"></td></tr></table>', anchor: new Microsoft.Maps.Point(-16, -16) };
+                var pushpinOptions = { width: null, height: null, htmlContent: '<table><tr><td style="text-align:center;"><span style="font-size:10px; color:#fff; background-color:#265080;">' + etiqueta + '</span></td></tr><tr><td style="text-align:center;"><img src="img/c.png" alt="" style="width:32px;height:32px;transform:rotate(' + asimut + 'deg);-ms-transform:rotate(' + asimut + 'deg);-webkit-transform:rotate(' + asimut + 'deg);"></td></tr></table>', anchor: new Microsoft.Maps.Point(16, 16) };
                 var location = new Microsoft.Maps.Location(lat, lon);
                 var pushpin = new Microsoft.Maps.Pushpin(location, pushpinOptions);
                 map.entities.push(pushpin);
@@ -619,10 +618,10 @@
             }
         </script>
     </head>
+    
     <body>
         <div id="Acciones" class="clearfix;">
             <img src="img/logo_titulo.png" />
-            <span class="icon-stats" id="ReportesButton"></span>
         </div>
         <div id="LoginPage" class="Pagina">
             <div class="logo">
