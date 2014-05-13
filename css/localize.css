@@ -87,6 +87,12 @@ input[type=password]:focus
         padding-top:1px;
         cursor:pointer;
         float:right;
+        margin-right:2px;
+    }
+    #Acciones #CerrarSesionButton{
+        padding-top:1px;
+        cursor:pointer;
+        float:right;
         margin-right:10px;
     }
     #Acciones #ReportesButton 

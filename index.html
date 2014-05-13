@@ -78,7 +78,17 @@
                 });
                 $("#UbicarButton").click(function ()
                 {
+                    if (localize.visibleUbicacionDeUsuario == true) {
+                        $('#UbicarButton').css("opacity", "0.6");
+                        localize.visibleUbicacionDeUsuario = false;
+                    }
+                    else {
+                        localize.visibleUbicacionDeUsuario = true;
+                    }
                     localize.obtenerUbicacionActual();
+                });
+                $("#CerrarSesionButton").click(function () {
+                    location.reload(true);
                 });
                 $("#Proveedores").change(function ()
                 {
@@ -92,7 +102,8 @@
     <body>
         <div id="Acciones" class="clearfix;">
             <img src="img/lot.png" />
-            <img id="UbicarButton" src="img/l.png" />
+            <img id="CerrarSesionButton" src="img/logout.png" title="Cerrar sesión" />
+            <img id="UbicarButton" src="img/l.png" title="Mi ubicación" />
         </div>
         <div id="LoginPage" class="Pagina">
             <div class="logo">
